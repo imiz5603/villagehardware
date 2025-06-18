@@ -15,44 +15,38 @@
 
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
       background-color: #f8f8f8;
+      color: #333;
     }
 
-    header {
+    header, footer, nav {
       background-color: #29434e;
-      color: #fff;
-      padding: 2rem;
+      color: white;
       text-align: center;
-    }
-
-    nav {
-      background-color: #455a64;
-      padding: 0.5rem;
-      text-align: center;
+      padding: 1rem;
     }
 
     nav a {
-      color: white;
       margin: 0 1rem;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .container {
+    .page {
+      display: none;
+      padding: 2rem;
       max-width: 1200px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      margin: 0 auto;
     }
 
-    .section {
-      margin-bottom: 3rem;
+    .page.active {
+      display: block;
     }
 
     h2 {
-      margin-bottom: 1rem;
       color: #29434e;
+      margin-bottom: 1rem;
     }
 
     .product-list {
@@ -72,21 +66,6 @@
       max-width: 100%;
       border-radius: 4px;
     }
-
-    .contact, .about, .gallery {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    footer {
-      background-color: #29434e;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 3rem;
-    }
   </style>
 </head>
 
@@ -97,68 +76,72 @@
   </header>
 
   <nav>
-    <a href="#products">Products</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
+    <a href="#" onclick="showPage('products')">Products</a>
+    <a href="#" onclick="showPage('about')">About</a>
+    <a href="#" onclick="showPage('gallery')">Gallery</a>
+    <a href="#" onclick="showPage('contact')">Contact</a>
   </nav>
 
-  <div class="container">
-
-    <section id="products" class="section">
-      <h2>Our Products</h2>
-      <div class="product-list">
-        <div class="product">
-          <img src="https://via.placeholder.com/250x150" alt="Hardware">
-          <h3>General Hardware</h3>
-          <p>From hand tools to fittings, find essential hardware supplies.</p>
-        </div>
-        <div class="product">
-          <img src="https://via.placeholder.com/250x150" alt="Art Supplies">
-          <h3>Art Supplies</h3>
-          <p>Canvas, brushes, paints, and more for all your creative needs.</p>
-        </div>
-        <div class="product">
-          <img src="https://via.placeholder.com/250x150" alt="Paint Supplies">
-          <h3>Paint & Coatings</h3>
-          <p>Interior, exterior paints, sealers, and painting tools.</p>
-        </div>
-        <div class="product">
-          <img src="https://via.placeholder.com/250x150" alt="Garden Tools">
-          <h3>Garden Tools</h3>
-          <p>Everything from spades to hoses for your garden projects.</p>
-        </div>
+  <div id="products" class="page active">
+    <h2>Our Products</h2>
+    <div class="product-list">
+      <div class="product">
+        <img src="https://via.placeholder.com/250x150" alt="Hardware">
+        <h3>General Hardware</h3>
+        <p>From hand tools to fittings, find essential hardware supplies.</p>
       </div>
-    </section>
-
-    <section id="about" class="section about">
-      <h2>About Us</h2>
-      <p>Village Hardware Art & Crafts has proudly served the Durban community for over 30 years, providing a wide selection of tools, hardware, paints, and art supplies. Located in Glenwood Village, we’re your go-to for DIY, crafts, and more.</p>
-    </section>
-
-    <section id="gallery" class="section gallery">
-      <h2>Customer Creations</h2>
-      <p>We love seeing what our customers make! Here’s a glimpse into projects using supplies from our store.</p>
-      <div class="product-list">
-        <div class="product"><img src="https://via.placeholder.com/250x150" alt="Project 1"></div>
-        <div class="product"><img src="https://via.placeholder.com/250x150" alt="Project 2"></div>
-        <div class="product"><img src="https://via.placeholder.com/250x150" alt="Project 3"></div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x150" alt="Art Supplies">
+        <h3>Art Supplies</h3>
+        <p>Canvas, brushes, paints, and more for all your creative needs.</p>
       </div>
-    </section>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x150" alt="Paint Supplies">
+        <h3>Paint & Coatings</h3>
+        <p>Interior, exterior paints, sealers, and painting tools.</p>
+      </div>
+      <div class="product">
+        <img src="https://via.placeholder.com/250x150" alt="Garden Tools">
+        <h3>Garden Tools</h3>
+        <p>Everything from spades to hoses for your garden projects.</p>
+      </div>
+    </div>
+  </div>
 
-    <section id="contact" class="section contact">
-      <h2>Contact Us</h2>
-      <p><strong>Address:</strong> Glenwood Village, Durban, South Africa</p>
-      <p><strong>Phone:</strong> +27 (0)31 123 4567</p>
-      <p><strong>Email:</strong> info@village-hardware-art-and-crafts.com</p>
-      <p><strong>Hours:</strong> Mon–Fri: 8am–5pm | Sat: 8am–1pm</p>
-    </section>
+  <div id="about" class="page">
+    <h2>About Us</h2>
+    <p>Village Hardware Art & Crafts has proudly served the Durban community for over 30 years, providing a wide selection of tools, hardware, paints, and art supplies. Located in Glenwood Village, we’re your go-to for DIY, crafts, and more.</p>
+  </div>
 
+  <div id="gallery" class="page">
+    <h2>Customer Creations</h2>
+    <p>We love seeing what our customers make! Here’s a glimpse into projects using supplies from our store.</p>
+    <div class="product-list">
+      <div class="product"><img src="https://via.placeholder.com/250x150" alt="Project 1"></div>
+      <div class="product"><img src="https://via.placeholder.com/250x150" alt="Project 2"></div>
+      <div class="product"><img src="https://via.placeholder.com/250x150" alt="Project 3"></div>
+    </div>
+  </div>
+
+  <div id="contact" class="page">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> Glenwood Village, Durban, South Africa</p>
+    <p><strong>Phone:</strong> +27 (0)31 123 4567</p>
+    <p><strong>Email:</strong> info@village-hardware-art-and-crafts.com</p>
+    <p><strong>Hours:</strong> Mon–Fri: 8am–5pm | Sat: 8am–1pm</p>
   </div>
 
   <footer>
     <p>&copy; 2025 Village Hardware Art & Crafts. All rights reserved.</p>
   </footer>
+
+  <script>
+    function showPage(pageId) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
 </body>
 
 </html>
