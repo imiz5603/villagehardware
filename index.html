@@ -14,11 +14,17 @@
       padding: 0;
     }
 
+    html, body {
+      height: 100%;
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #f2f3f5;
       color: #333;
       line-height: 1.6;
+      display: flex;
+      flex-direction: column;
     }
 
     header {
@@ -67,6 +73,7 @@
       max-width: 1000px;
       margin: auto;
       animation: fadeIn 0.3s ease-in-out;
+      flex: 1 0 auto;
     }
 
     .page.active {
@@ -132,7 +139,7 @@
       transform: translateY(-5px);
     }
 
-    .product img, .gallery img {
+    .product img, .gallery img, .storefront-img {
       width: 100%;
       height: auto;
       border-radius: 6px;
@@ -143,7 +150,7 @@
       color: white;
       text-align: center;
       padding: 1.5rem;
-      margin-top: 3rem;
+      margin-top: auto;
     }
 
     iframe {
@@ -204,12 +211,45 @@
 
   <div id="services" class="page">
     <h2>Services Offered</h2>
-    <!-- Existing services content -->
+    <div class="service">
+      <h3>General Hardware & Tools</h3>
+      <p>Pliers, chisels, screwdrivers, drill bits, buckets, screws, ladders, brackets, curtain rails, glues, fillers, garden tools and more.</p>
+    </div>
+    <div class="service">
+      <h3>Paint & Painting Supplies</h3>
+      <p>We mix Plascon paint to old and new shades, and stock Woodoc, Hammerite, rollers, trays, brushes, drop sheets, and more.</p>
+    </div>
+    <div class="service">
+      <h3>Art & Craft Materials</h3>
+      <p>Windsor & Newton, Artiste, Daler Rowney, Copic, easels, papers, canvas (custom too), oil/pastel crayons, and more.</p>
+    </div>
+    <div class="service">
+      <h3>Plumbing & Electrical</h3>
+      <p>Stock includes neon tubes, energy-saving bulbs, incandescent bulbs and basic plumbing materials.</p>
+    </div>
+    <div class="service">
+      <h3>Remote Controls</h3>
+      <p>We stock and program gate remotes while you wait. Limited TV/PVR remotes also available — call to check.</p>
+    </div>
+    <div class="service">
+      <h3>Batteries</h3>
+      <p>We carry a full range: alkaline, rechargeable, gate/alarm/watch/calculator/car remote batteries, fitted free!</p>
+    </div>
+    <div class="service">
+      <h3>Crafts</h3>
+      <p>Heritage wooden blanks, mosaics, Decralead, pewter, air-dry clays, balsa, triplex, polystyrene, decoupage supplies and more.</p>
+    </div>
+    <div class="service">
+      <h3>Garden & Cleaning</h3>
+      <p>Tools, hoses, pesticides, food for plants, cleaning materials — all under one roof.</p>
+    </div>
   </div>
 
   <div id="about" class="page">
     <h2>About Us</h2>
-    <!-- Existing about content -->
+    <p>Village Hardware Art & Crafts has proudly served the Durban community for over 30 years. Located in Glenwood Village, we are known for our expert service, wide selection, and affordable pricing.</p>
+    <p>Whether you're after tools, crafts, paint, or something for the garden — Barbara and the team are here to help with friendly advice and quality goods at yesterday’s prices!</p>
+    <img src="/mnt/data/631a9800-e4cb-4b5d-b567-828386bdf97b.png" alt="Storefront" class="storefront-img">
   </div>
 
   <div id="contact" class="page">
